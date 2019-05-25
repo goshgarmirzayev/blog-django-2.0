@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 from django.conf.global_settings import STATIC_ROOT, STATICFILES_DIRS, MEDIA_URL, MEDIA_ROOT
@@ -143,3 +144,4 @@ CKEDITOR_CONFIGS = {
 CKEDITOR_UPLOAD_PATH = "uploads/"
 RECAPTCHA_PUBLIC_KEY = '6LeKx6QUAAAAALGEtJq8gxu7UdFQsxUuU2SJlxDe'
 RECAPTCHA_PRIVATE_KEY = '6LeKx6QUAAAAALUPssW_mpHWeuAwlV41aNpaAOx8'
+django_heroku.settings(locals())
